@@ -33,7 +33,7 @@ export function QuickChips({ chips, onSelect }: QuickChipsProps) {
       horizontal
       showsHorizontalScrollIndicator={false}
       contentContainerStyle={[styles.container, DEBUG_CHAT_UI && debugStyles.container]}
-      style={DEBUG_CHAT_UI ? debugStyles.scrollView : undefined}
+      style={[styles.scrollView, DEBUG_CHAT_UI && debugStyles.scrollView]}
       onLayout={handleLayout('ScrollView')}
       onContentSizeChange={(w, h) => {
         if (DEBUG_CHAT_UI) console.log('[DEBUG QuickChips] contentSize:', { w, h });
@@ -60,9 +60,14 @@ export function QuickChips({ chips, onSelect }: QuickChipsProps) {
 }
 
 const styles = StyleSheet.create({
+  scrollView: {
+    flexGrow: 0,
+    flexShrink: 0,
+  },
   container: {
     paddingHorizontal: spacing.sm,
     paddingVertical: spacing.sm,
+    alignItems: 'center',
   },
   chip: {
     backgroundColor: chatColors.surface,

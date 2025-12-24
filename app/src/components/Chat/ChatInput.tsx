@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
     backgroundColor: chatColors.surface,
     borderRadius: borderRadius.md,
     paddingHorizontal: spacing.md,
-    paddingVertical: Platform.OS === 'ios' ? spacing.sm : 4,
+    paddingVertical: Platform.OS === 'ios' ? spacing.sm : 10,
     fontSize: typography.input.fontSize,
     fontWeight: typography.input.fontWeight,
     includeFontPadding: false,

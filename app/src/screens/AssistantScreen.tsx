@@ -187,6 +187,7 @@ export function AssistantScreen({ navigation }: MainTabScreenProps<'Assistant'>)
         data={messages}
         keyExtractor={(item) => item.id.toString()}
         renderItem={renderMessage}
+        style={styles.messageListContainer}
         contentContainerStyle={[
           styles.messageList,
           messages.length === 0 && styles.messageListEmpty,
@@ -241,6 +242,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: chatColors.background,
+  },
+  messageListContainer: {
+    flex: 1,
   },
   header: {
     flexDirection: 'row',

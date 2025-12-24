@@ -4,6 +4,7 @@
   "main": "index.ts",
   "scripts": {
     "start": "expo start",
+    "start:debug": "cross-env EXPO_PUBLIC_DEBUG_CHAT_UI=1 expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web"
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "@types/react": "~19.1.0",
+    "cross-env": "^10.1.0",
     "tsx": "^4.21.0",
     "typescript": "~5.9.2",
     "yaml": "^2.8.2"
