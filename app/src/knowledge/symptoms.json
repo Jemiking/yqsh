@@ -1,0 +1,659 @@
+[
+  {
+    "id": "sym_01",
+    "symptom_name": "阴道出血",
+    "symptom_name_en": "Vaginal Bleeding",
+    "questions": [
+      "出血量大吗（1小时内浸透一片卫生巾）？",
+      "有剧烈腹痛或痉挛吗？",
+      "有头晕、眼花或晕厥感吗？",
+      "孕周不足37周吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "大量出血、剧烈疼痛或头晕任一为是",
+        "action": "立即去急诊",
+        "urgency": "EMERGENCY"
+      },
+      {
+        "condition": "不足37周（即使少量出血）",
+        "action": "立即联系医生",
+        "urgency": "CALL_DOCTOR"
+      },
+      {
+        "condition": "全部为否（极少量点滴、足月、无痛）",
+        "action": "联系医生报告并观察",
+        "urgency": "MONITOR"
+      }
+    ],
+    "dad_actions": [
+      "如大量出血，呼叫急救或开车送医",
+      "帮助她左侧卧位",
+      "保留排出的组织或血块给医生看",
+      "禁食禁水以防需要手术"
+    ]
+  },
+  {
+    "id": "sym_02",
+    "symptom_name": "破水/漏液",
+    "symptom_name_en": "Water Breaking / Leaking Fluid",
+    "questions": [
+      "液体是绿色、棕色或带血吗？",
+      "能看到或摸到脐带吗？",
+      "孕周不足37周吗？",
+      "GBS（B族链球菌）阳性吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "看到脐带",
+        "action": "紧急呼叫120，采取膝胸位",
+        "urgency": "EMERGENCY"
+      },
+      {
+        "condition": "液体绿色/棕色 或 不足37周",
+        "action": "立即去医院",
+        "urgency": "EMERGENCY"
+      },
+      {
+        "condition": "GBS阳性",
+        "action": "去医院（需要抗生素）",
+        "urgency": "CALL_DOCTOR"
+      },
+      {
+        "condition": "清亮液体、足月、GBS阴性",
+        "action": "联系医生/医院获取指导",
+        "urgency": "CALL_DOCTOR"
+      }
+    ],
+    "dad_actions": [
+      "记录时间、量、颜色和气味",
+      "不要往阴道内放任何东西",
+      "打包待产包准备出发"
+    ]
+  },
+  {
+    "id": "sym_03",
+    "symptom_name": "宫缩/腹痛",
+    "symptom_name_en": "Contractions",
+    "questions": [
+      "宫缩符合5-1-1规则吗（5分钟一次、每次持续1分钟、持续1小时）？",
+      "孕周不足37周吗？",
+      "有持续剧痛吗（宫缩之间没有间歇）？",
+      "破水了吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "持续剧痛 或 不足37周",
+        "action": "立即去医院",
+        "urgency": "EMERGENCY"
+      },
+      {
+        "condition": "符合5-1-1规则 或 已破水",
+        "action": "联系医生/去医院",
+        "urgency": "CALL_DOCTOR"
+      },
+      {
+        "condition": "不规律宫缩、休息或喝水后缓解",
+        "action": "观察，补水休息",
+        "urgency": "NORMAL"
+      }
+    ],
+    "dad_actions": [
+      "计时宫缩（频率和持续时间）",
+      "帮助她做呼吸练习",
+      "如果没有手术可能可以喝水",
+      "准备待产包"
+    ]
+  },
+  {
+    "id": "sym_04",
+    "symptom_name": "胎动减少",
+    "symptom_name_en": "Decreased Fetal Movement",
+    "questions": [
+      "进食后1小时内胎动少于10次吗？",
+      "宝宝完全不动了吗？",
+      "孕周超过28周吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "完全不动 或 进食后1小时内少于10次",
+        "action": "立即联系医生/去医院",
+        "urgency": "EMERGENCY"
+      },
+      {
+        "condition": "有胎动但感觉比平时弱",
+        "action": "喝果汁/冰水，左侧卧，重新数",
+        "urgency": "MONITOR"
+      }
+    ],
+    "dad_actions": [
+      "给她拿一杯甜饮料或冰水",
+      "帮助她在安静房间左侧卧",
+      "专心数胎动一小时",
+      "如果数量不够不要等到明天"
+    ]
+  },
+  {
+    "id": "sym_05",
+    "symptom_name": "剧烈头痛",
+    "symptom_name_en": "Severe Headache",
+    "questions": [
+      "头痛是突发剧烈的（'炸裂样'）吗？",
+      "伴有视力变化或口齿不清吗？",
+      "吃泰诺（对乙酰氨基酚）不能缓解吗？",
+      "手/脸有水肿吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "炸裂样头痛 或 神经症状",
+        "action": "立即去急诊（中风/子痫前期风险）",
+        "urgency": "EMERGENCY"
+      },
+      {
+        "condition": "药物无效 或 有水肿",
+        "action": "立即联系医生（排查子痫前期）",
+        "urgency": "CALL_DOCTOR"
+      },
+      {
+        "condition": "轻微头痛、休息/吃药后缓解",
+        "action": "休息、补水、观察",
+        "urgency": "NORMAL"
+      }
+    ],
+    "dad_actions": [
+      "如有血压计测量血压",
+      "关灯减少噪音",
+      "确保她喝水",
+      "血压超过140/90立即联系医生"
+    ]
+  },
+  {
+    "id": "sym_06",
+    "symptom_name": "视力改变",
+    "symptom_name_en": "Vision Changes",
+    "questions": [
+      "看到闪光、黑点或星星吗？",
+      "视力模糊或重影吗？",
+      "部分失明吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "任何一项为是",
+        "action": "立即联系医生（子痫前期征兆）",
+        "urgency": "CALL_DOCTOR"
+      },
+      {
+        "condition": "突然失明",
+        "action": "去急诊",
+        "urgency": "EMERGENCY"
+      }
+    ],
+    "dad_actions": [
+      "立即测量血压",
+      "不要让她开车",
+      "打电话给产科分诊台"
+    ]
+  },
+  {
+    "id": "sym_07",
+    "symptom_name": "突然水肿",
+    "symptom_name_en": "Sudden Swelling (Edema)",
+    "questions": [
+      "脸部或眼睛周围突然肿胀吗？",
+      "一条腿明显比另一条肿吗？",
+      "手突然很肿（戒指摘不下来）？",
+      "伴有头痛或视力变化吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "一条腿肿/疼痛",
+        "action": "去急诊（排除深静脉血栓）",
+        "urgency": "EMERGENCY"
+      },
+      {
+        "condition": "脸/手肿胀 + 头痛",
+        "action": "立即联系医生（子痫前期）",
+        "urgency": "CALL_DOCTOR"
+      },
+      {
+        "condition": "只是脚踝轻微水肿",
+        "action": "抬高双脚，休息",
+        "urgency": "NORMAL"
+      }
+    ],
+    "dad_actions": [
+      "测量血压",
+      "按压水肿部位，如留下凹陷要记录",
+      "帮助她把脚抬高到心脏以上"
+    ]
+  },
+  {
+    "id": "sym_08",
+    "symptom_name": "发烧",
+    "symptom_name_en": "Fever",
+    "questions": [
+      "体温超过38°C（100.4°F）吗？",
+      "有剧烈腰痛（肾脏区）吗？",
+      "呼吸困难吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "超过38°C 或 肾区疼痛",
+        "action": "立即联系医生",
+        "urgency": "CALL_DOCTOR"
+      },
+      {
+        "condition": "伴有呼吸困难",
+        "action": "去急诊",
+        "urgency": "EMERGENCY"
+      },
+      {
+        "condition": "低烧（低于38°C），轻微感冒症状",
+        "action": "观察，多喝水，可服用对乙酰氨基酚",
+        "urgency": "MONITOR"
+      }
+    ],
+    "dad_actions": [
+      "每4小时测量体温",
+      "鼓励多喝水防止脱水",
+      "用凉毛巾敷额头"
+    ]
+  },
+  {
+    "id": "sym_09",
+    "symptom_name": "右上腹痛",
+    "symptom_name_en": "Upper Right Abdominal Pain",
+    "questions": [
+      "右肋骨下方持续剧痛吗？",
+      "伴有恶心、呕吐或头痛吗？",
+      "感觉像胃灼热但吃药不缓解吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "任何一项为是",
+        "action": "立即联系医生（肝脏/子痫前期/胆囊）",
+        "urgency": "CALL_DOCTOR"
+      },
+      {
+        "condition": "剧烈持续不缓解",
+        "action": "去急诊",
+        "urgency": "EMERGENCY"
+      }
+    ],
+    "dad_actions": [
+      "不要以为只是消化不良",
+      "测量血压",
+      "送她就医"
+    ]
+  },
+  {
+    "id": "sym_10",
+    "symptom_name": "剧烈恶心呕吐",
+    "symptom_name_en": "Severe Nausea & Vomiting",
+    "questions": [
+      "24小时内无法摄入任何液体吗？",
+      "呕吐物带血（看起来像咖啡渣）吗？",
+      "有脱水迹象吗（尿液深色、头晕）？",
+      "有剧烈腹痛吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "呕吐物带血 或 剧烈腹痛",
+        "action": "去急诊",
+        "urgency": "EMERGENCY"
+      },
+      {
+        "condition": "无法进食进水 / 脱水",
+        "action": "联系医生（需要补液/用药）",
+        "urgency": "CALL_DOCTOR"
+      },
+      {
+        "condition": "偶尔呕吐，能喝水",
+        "action": "少食多餐，生姜，休息",
+        "urgency": "NORMAL"
+      }
+    ],
+    "dad_actions": [
+      "给她小口电解质水或冰块",
+      "观察尿液颜色（深色=不好）",
+      "注意有无晕厥"
+    ]
+  },
+  {
+    "id": "sym_11",
+    "symptom_name": "呼吸困难",
+    "symptom_name_en": "Shortness of Breath",
+    "questions": [
+      "休息/坐着时也喘吗？",
+      "有胸痛或咳血吗？",
+      "嘴唇或指尖发紫吗？",
+      "脉搏很快/不规律吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "任何一项为是",
+        "action": "立即去急诊（肺栓塞风险）",
+        "urgency": "EMERGENCY"
+      },
+      {
+        "condition": "只在活动/上楼后，很快恢复",
+        "action": "休息，放慢节奏",
+        "urgency": "NORMAL"
+      }
+    ],
+    "dad_actions": [
+      "让她坐直",
+      "检查脉搏",
+      "如果她说不出完整句子，打120"
+    ]
+  },
+  {
+    "id": "sym_12",
+    "symptom_name": "胸痛",
+    "symptom_name_en": "Chest Pain",
+    "questions": [
+      "胸痛是压榨感、放射到手臂/下巴吗？",
+      "伴有呼吸困难或出汗吗？",
+      "脉搏不规律或很快吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "任何一项为是",
+        "action": "呼叫120/立即去急诊",
+        "urgency": "EMERGENCY"
+      },
+      {
+        "condition": "吃东西后烧灼感（胃灼热）",
+        "action": "尝试抗酸药，坐直",
+        "urgency": "MONITOR"
+      }
+    ],
+    "dad_actions": [
+      "认真对待胸痛",
+      "保持她冷静",
+      "怀疑心脏问题不要自己开车，叫救护车"
+    ]
+  },
+  {
+    "id": "sym_13",
+    "symptom_name": "腿部疼痛/肿胀",
+    "symptom_name_en": "Leg Pain / Swelling (DVT)",
+    "questions": [
+      "一条腿肿胀、发红、摸起来烫吗？",
+      "弯脚时小腿痛吗？",
+      "疼痛只在一条腿吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "任何一项为是",
+        "action": "去急诊（排除血栓）",
+        "urgency": "EMERGENCY"
+      },
+      {
+        "condition": "两条腿都轻微肿，不痛",
+        "action": "抬高双腿，多喝水",
+        "urgency": "NORMAL"
+      }
+    ],
+    "dad_actions": [
+      "不要按摩那条腿（可能让血栓脱落）",
+      "带她去医院"
+    ]
+  },
+  {
+    "id": "sym_14",
+    "symptom_name": "剧烈背痛",
+    "symptom_name_en": "Severe Back Pain",
+    "questions": [
+      "疼痛是有规律的（一阵一阵）吗？",
+      "有发烧或排尿疼痛吗？",
+      "腿部或会阴有麻木感吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "有规律的阵痛",
+        "action": "联系医生（可能是产兆）",
+        "urgency": "CALL_DOCTOR"
+      },
+      {
+        "condition": "发烧/排尿痛",
+        "action": "联系医生（肾脏感染）",
+        "urgency": "CALL_DOCTOR"
+      },
+      {
+        "condition": "麻木",
+        "action": "去急诊",
+        "urgency": "EMERGENCY"
+      },
+      {
+        "condition": "持续酸痛、活动后加重",
+        "action": "热敷、休息、按摩",
+        "urgency": "NORMAL"
+      }
+    ],
+    "dad_actions": [
+      "帮她按摩背部（如无血栓风险）",
+      "使用孕妇枕",
+      "温水泡澡"
+    ]
+  },
+  {
+    "id": "sym_15",
+    "symptom_name": "排尿疼痛",
+    "symptom_name_en": "Painful Urination",
+    "questions": [
+      "排尿时有灼烧或刺痛感吗？",
+      "尿里有血吗？",
+      "有发烧或腰痛吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "有发烧或腰痛",
+        "action": "立即联系医生（肾脏感染）",
+        "urgency": "CALL_DOCTOR"
+      },
+      {
+        "condition": "只有灼烧/刺痛",
+        "action": "预约医生（尿路感染）",
+        "urgency": "CALL_DOCTOR"
+      }
+    ],
+    "dad_actions": [
+      "鼓励她多喝水",
+      "帮她预约",
+      "尿路感染可能导致早产，不要忽视"
+    ]
+  },
+  {
+    "id": "sym_16",
+    "symptom_name": "皮肤瘙痒",
+    "symptom_name_en": "Severe Itching",
+    "questions": [
+      "手掌和脚底剧烈瘙痒吗？",
+      "晚上更痒吗？",
+      "有皮疹吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "手掌/脚底痒（无皮疹）",
+        "action": "联系医生（排查胆汁淤积）",
+        "urgency": "CALL_DOCTOR"
+      },
+      {
+        "condition": "只是妊娠纹痒",
+        "action": "涂保湿霜",
+        "urgency": "NORMAL"
+      }
+    ],
+    "dad_actions": [
+      "检查她的手和脚",
+      "凉水澡",
+      "避免热水"
+    ]
+  },
+  {
+    "id": "sym_17",
+    "symptom_name": "跌倒或外伤",
+    "symptom_name_en": "Falls or Trauma",
+    "questions": [
+      "摔到肚子了吗？",
+      "有阴道出血或漏液吗？",
+      "有宫缩或腹痛吗？",
+      "她是Rh阴性血型吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "任何一项为是（Rh阴性即使轻微跌倒也要）",
+        "action": "去医院监测",
+        "urgency": "EMERGENCY"
+      },
+      {
+        "condition": "轻微滑倒、没摔到肚子、无疼痛",
+        "action": "联系医生报告，注意数胎动",
+        "urgency": "MONITOR"
+      }
+    ],
+    "dad_actions": [
+      "密切关注胎动",
+      "观察是否有延迟出血",
+      "有疑问就去检查"
+    ]
+  },
+  {
+    "id": "sym_18",
+    "symptom_name": "血压升高",
+    "symptom_name_en": "High Blood Pressure",
+    "questions": [
+      "收缩压 > 160 或 舒张压 > 110 吗？",
+      "收缩压 > 140 或 舒张压 > 90 吗？",
+      "有症状（头痛、视力变化）吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "> 160/110",
+        "action": "立即去急诊",
+        "urgency": "EMERGENCY"
+      },
+      {
+        "condition": "> 140/90 或 有症状",
+        "action": "立即联系医生",
+        "urgency": "CALL_DOCTOR"
+      }
+    ],
+    "dad_actions": [
+      "休息15分钟后重新测量",
+      "保持她冷静",
+      "记录数值"
+    ]
+  },
+  {
+    "id": "sym_19",
+    "symptom_name": "头晕/晕厥",
+    "symptom_name_en": "Dizziness or Fainting",
+    "questions": [
+      "真的晕倒失去意识了吗？",
+      "脉搏不规律或心跳很快吗？",
+      "有出血或疼痛吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "晕厥 或 心律不齐",
+        "action": "去急诊",
+        "urgency": "EMERGENCY"
+      },
+      {
+        "condition": "站起来太快头晕",
+        "action": "坐下/躺下，喝水，吃点东西",
+        "urgency": "MONITOR"
+      }
+    ],
+    "dad_actions": [
+      "注意接住她如果要倒",
+      "抬高双腿",
+      "如有糖尿病检查血糖"
+    ]
+  },
+  {
+    "id": "sym_20",
+    "symptom_name": "异常阴道分泌物",
+    "symptom_name_en": "Abnormal Vaginal Discharge",
+    "questions": [
+      "有腥臭味吗？",
+      "是绿色或黄色泡沫状吗？",
+      "是白色豆腐渣样（伴瘙痒）吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "腥臭味 或 绿色/黄色",
+        "action": "联系医生（排查感染）",
+        "urgency": "CALL_DOCTOR"
+      },
+      {
+        "condition": "白色/瘙痒",
+        "action": "联系医生（霉菌感染）",
+        "urgency": "MONITOR"
+      },
+      {
+        "condition": "稀薄乳白色（白带）",
+        "action": "正常",
+        "urgency": "NORMAL"
+      }
+    ],
+    "dad_actions": [
+      "建议穿纯棉内裤",
+      "避免使用香味肥皂"
+    ]
+  },
+  {
+    "id": "sym_21",
+    "symptom_name": "严重便秘",
+    "symptom_name_en": "Severe Constipation",
+    "questions": [
+      "超过3-4天没排便吗？",
+      "有剧烈腹痛吗？",
+      "有便血吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "剧烈腹痛 或 便血",
+        "action": "联系医生",
+        "urgency": "CALL_DOCTOR"
+      },
+      {
+        "condition": "只是不舒服",
+        "action": "增加纤维/水分，软便剂（如医生允许）",
+        "urgency": "NORMAL"
+      }
+    ],
+    "dad_actions": [
+      "买西梅汁或高纤维食物",
+      "确保她多喝水"
+    ]
+  },
+  {
+    "id": "sym_22",
+    "symptom_name": "心悸",
+    "symptom_name_en": "Heart Palpitations",
+    "questions": [
+      "有胸痛或呼吸困难吗？",
+      "持续超过几分钟吗？",
+      "有心脏病史吗？"
+    ],
+    "decision_paths": [
+      {
+        "condition": "任何一项为是",
+        "action": "去急诊",
+        "urgency": "EMERGENCY"
+      },
+      {
+        "condition": "短暂扑动感、休息后缓解",
+        "action": "休息、补水、下次产检时提及",
+        "urgency": "MONITOR"
+      }
+    ],
+    "dad_actions": [
+      "帮助她放松做深呼吸",
+      "检查脉搏频率"
+    ]
+  }
+]
