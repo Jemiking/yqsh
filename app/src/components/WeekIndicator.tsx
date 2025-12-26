@@ -33,7 +33,10 @@ export function WeekIndicator({ progress, showDetails = true }: WeekIndicatorPro
         <View style={styles.details}>
           <View style={styles.detailItem}>
             <Text style={styles.detailLabel}>宝宝大小</Text>
-            <Text style={styles.detailValue}>{babySize.comparison}</Text>
+            <View style={styles.sizeRow}>
+              <Text style={styles.sizeEmoji}>{babySize.emoji}</Text>
+              <Text style={styles.detailValue}>{babySize.comparison}</Text>
+            </View>
             <Text style={styles.detailSubtext}>{babySize.size} / {babySize.weight}</Text>
           </View>
           <View style={styles.detailItem}>
@@ -114,5 +117,13 @@ const styles = StyleSheet.create({
     ...typography.caption,
     color: colors.textMuted,
     marginTop: spacing.xs,
+  },
+  sizeRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  sizeEmoji: {
+    fontSize: 20,
+    marginRight: spacing.xs,
   },
 });

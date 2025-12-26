@@ -140,7 +140,7 @@ export function HomeScreen({ navigation }: MainTabScreenProps<'Home'>) {
 
         <View style={styles.babyInfo}>
           <View style={styles.babyInfoIcon}>
-            <Text style={styles.babyEmoji}>👶</Text>
+            <Text style={styles.babyEmoji}>{babySize.emoji}</Text>
           </View>
           <View style={styles.babyInfoContent}>
             <Text style={styles.babyInfoTitle}>宝宝现在像</Text>
